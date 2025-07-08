@@ -20,6 +20,7 @@ public class MemberService {
     /**
      * 회원 가입
      */
+    @Transactional
     public Long join(Member member) {
         // 중복회원 검증
         validateDuplicateMember(member);
@@ -40,7 +41,7 @@ public class MemberService {
      * 회원 조회
      */
     public List<Member> findMembers() {
-        return memberRepository.findAll();
+            return memberRepository.findAll();
     }
 
     public Member findOne(Long memberId) {

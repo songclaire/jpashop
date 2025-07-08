@@ -19,6 +19,7 @@ public class MemberRepository {
 
     public void save(Member member) {
         em.persist(member);
+        System.out.println("✅✅✅✅✅✅✅✅✅✅✅✅✅✅ 저장 완료: " + member.getName());
     }
 
     public Member findOne(Long id) {
